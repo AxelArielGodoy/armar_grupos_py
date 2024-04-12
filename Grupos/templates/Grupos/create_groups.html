@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Groups</title>
+</head>
+<body>
+    <h1>Create Groups</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="students">Enter student names (separated by commas):</label><br>
+        <input type="text" id="students" name="students"><br><br>
+        <button type="submit">Create Groups</button>
+    </form>
+</body>
+</html>

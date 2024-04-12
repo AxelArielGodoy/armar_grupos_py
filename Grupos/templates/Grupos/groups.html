@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups</title>
+</head>
+<body>
+    <h1>Groups</h1>
+    {% if groups %}
+        <h2>Grouped Students:</h2>
+        <ul>
+            {% for group in groups %}
+                <li>{{ group.0 }} and {{ group.1 }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if ungrouped_student %}
+        <h2>Ungrouped Student:</h2>
+        <p>{{ ungrouped_student }}</p>
+    {% endif %}
+</body>
+</html>
